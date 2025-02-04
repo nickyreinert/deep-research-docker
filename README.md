@@ -8,15 +8,22 @@ Clone this repository locally and run `setup.sh`:
 
 ```bash  
 git clone https://github.com/nickyreinert/deep-research-docker.git  
-cd deep-research-docker  
-bash setup.sh  
+cd deep-research-docker
 ```
-
-## 🔑 API Keys  
-You'll need API keys for **OpenAI** and **Firecrawl** to use this project.  
+When done run the app. It will ask you for your API keys for **OpenAI** and **Firecrawl**:
 
 - **OpenAI API Key:** Get it from [OpenAI's platform](https://platform.openai.com).  
 - **Firecrawl API Key:** Register at [Firecrawl's website](https://firecrawl.com).  
+
+```bash
+bash setup.sh  
+```
+
+  Please fill in the values for FIRECRAWL_KEY and OPENAI_KEY in the .env.local file
+  You can get the FIRECRAWL_KEY from https://firecrawl.com
+  You can get the OPENAI_KEY from https://platform.openai.com
+  Enter FIRECRAWL_KEY: 
+  Enter OPENAI_KEY:
 
 💡 **Both OpenAI and Firecrawl offer free-tier access**, allowing you to test without an initial cost!  
 
