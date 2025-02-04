@@ -21,6 +21,7 @@ if [ ! -f "$(pwd)/.env.local" ]; then
     # write them to .env.local
     echo "FIRECRAWL_KEY=$FIRECRAWL_KEY" >> "$(pwd)/.env.local"
     echo "OPENAI_KEY=$OPENAI_KEY" >> "$(pwd)/.env.local"
+
 fi
 
 # Step 1: Clone the repository on the host
@@ -44,7 +45,7 @@ docker run -itd --name "$CONTAINER_NAME" \
     -v "$(pwd)/$HOST_DIR:/usr/src/app" \
     "$IMAGE_NAME"
 
-COPY .env.local $HOST_DIR/.env.local
+cp .env.local $HOST_DIR/.env.local
 
 # Step 4: Install npm dependencies inside the container
 echo "Installing dependencies inside the container..."
